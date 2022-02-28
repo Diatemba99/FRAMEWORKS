@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="sayHi(); return false;" >
+        <fieldset>
+            <legeng>Infos Personnelles</legeng>
+            <p>
+                <label for="">Prenom</label>
+                <input type="text" name="" id="prenom">
+            </p>
+        </fieldset>
+        <input type="submit" value="Saluer">
+    </form>
+    <p id="result"></p>
+    <script>
+        function sayHi() {
+            let prenom = document.querySelector("#prenom").value;
+            //alert(`Hi ${prenom}`);
+
+            let para = document.querySelector("#result");
+            para.innerHTML = `Hi ${prenom}`;
+
+
+
+
+        }
+    </script>
+</body>
+</html>
