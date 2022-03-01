@@ -13,6 +13,14 @@
             <p>
                 <label for="">Prenom</label>
                 <input type="text" name="" id="prenom">
+
+                
+                <label for="">Nom</label>
+                <input type="text" name="" id="nom">
+
+
+                <label for="">Date de naissance</label>
+                <input type="date"  id="ddn" name="ddn">
             </p>
         </fieldset>
         <input type="submit" value="Saluer">
@@ -21,10 +29,13 @@
     <script>
         function sayHi() {
             let prenom = document.querySelector("#prenom").value;
+            let nom = document.querySelector("#nom").value;
+            let ddn = document.querySelector("#ddn").value;
             //alert(`Hi ${prenom}`);
 
             let para = document.querySelector("#result");
-            para.innerHTML = `Hi ${prenom}`;
+            //para.innerHTML = `Hi ${prenom}`;
+            para.innerHTML = `Hi ${prenom} ${nom} you was born in ${ddn}`;
 
 
 
