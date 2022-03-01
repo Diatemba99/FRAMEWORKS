@@ -1,5 +1,3 @@
-# FRAMEWORKS
-
 # Hyde
 
 Hyde is a brazen two-column [hugo](https://gohugo.io) theme based on the [Jekyll](http://jekyllrb.com) theme of the same name.
@@ -68,10 +66,57 @@ theme = "hyde"
   ]
 ```
 
+**YAML**
+```yaml
+theme: "hyde"
 
+Menus:
+  main:
+    - Name: "Github"
+      URL: "https://github.com/username/"
+    - Name: "LinkedIn"
+      URL: "https://www.linkedin.com/in/username/"
+```
 
 ### Sidebar description
 Customise the describe of your page using `description`, like so:
+
+**TOML**
+```toml
+theme = "hyde"
+
+[params]
+  description = "Your custom description"
+```
+
+**YAML**
+```yaml
+theme: "hyde"
+
+params:
+  description = "Your custom description"
+```
+
+
+### Sticky sidebar content
+
+By default Hyde ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disabled this by removing the `.sidebar-sticky` class from the sidebar's `.container`. Sidebar content will then normally flow from top to bottom.
+
+```html
+<!-- Default sidebar -->
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    ...
+  </div>
+</div>
+
+<!-- Modified sidebar -->
+<div class="sidebar">
+  <div class="container">
+    ...
+  </div>
+</div>
+```
 
 
 ### Themes
@@ -86,7 +131,13 @@ There are eight themes available at this time.
 
 To use a theme, add the `themeColor` variable under `params`, like so:
 
+**TOML**
+```toml
+theme = "hyde"
 
+[params]
+  themeColor = "theme-base-09"
+```
 
 **YAML**
 ```yaml
@@ -112,10 +163,58 @@ theme = "hyde"
   layoutReverse = true
 ```
 
+**YAML**
+```yaml
+theme: "hyde"
+
+params:
+  layoutReverse: true
+```
+
+### Disqus
+
+You can optionally enable a comment system powered by Disqus for the posts. Simply add the variable `disqusShortname` to your config file.
+
+**TOML**
+```toml
+disqusShortname = "spf13"
+```
+
+**YAML**
+```yaml
+disqusShortname : spf13
+```
+
 > **Note:** Previous version 1.0 the Disqus shortname had to be defined inside the `[params]` block.
+
+
+## Google Analytics
+
+Google Analytics can be enabled by assigning your tracking code to the `googleAnalytics` variable in the config file:
+
+**TOML**
+```toml
+googleAnalytics = "Your tracking code"
+```
+
+**YAML**
+```yaml
+googleAnalytics: Your tracking code
+```
 
 ## Author
 **Mark Otto**
 - <https://github.com/mdo>
 - <https://twitter.com/mdo>
 
+## Ported By
+**Steve Francia**
+- <https://github.com/spf13>
+- <https://twitter.com/spf13>
+
+## License
+
+Open sourced under the [MIT license](LICENSE.md).
+
+<3
+# opensec

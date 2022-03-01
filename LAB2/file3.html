@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXO</title>
+</head>
+<body>
+    <script>
+        let mybody = document.body;
+
+        let myH1 = document.createElement("h1");
+        let myUl = document.createElement("ul");
+        let myli1 = document.createElement("li");
+        let myli2 = document.createElement("li");
+        let myli3 = document.createElement("li");
+        myH1.innerHTML = "DOM Content";
+
+        myli1.innerHTML = "First";
+        myli2.innerHTML = "Second";
+        myli3.innerHTML = "Third";
+
+        myH1.style.color = "blue";
+        myli1.style.color = "green";
+        myli2.style.color = "yellow";
+        myli3.style.color = "red";
+
+
+        //
+        mybody.appendChild(myH1);
+        
+        mybody.appendChild(myUl);
+
+        //
+        mybody.appendChild(myli1);
+        mybody.appendChild(myli2);
+        mybody.appendChild(myli3);
+
+
+    </script>
+
+
+</body>
+</html>
