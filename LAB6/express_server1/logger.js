@@ -4,7 +4,7 @@ const http = require("http");
 const { response } = require("express");
 
 const app = express();
-app.use(logger("short"));
+app.use(logger("combined"));
 
 app.use((request, response) => {
     response.end("Hello, World !");
