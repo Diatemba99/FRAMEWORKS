@@ -4,7 +4,7 @@ const http = require("http");
 
 const app = express();
 
-app.get("/",(req,res) => {
+app.get("/home",(req,res) => {
     res.end(" BIENVENUE !");
 });
 
@@ -18,7 +18,7 @@ app.get("/guest/:nameUser",(req,res) => {
 
 
 app.use((request, response) => {
-    console.log("Server is running !");
+    response.end("Server is running !");
 });
 
 http.createServer(app).listen(3000);
